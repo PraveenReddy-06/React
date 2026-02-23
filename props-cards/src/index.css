@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+@layer components {
+  .container {
+    @apply max-w-6xl mx-auto px-4 ;
+  }
+  .card {
+    @apply flex bg-sky-500 text-white px-5 py-5 justify-between rounded-lg shadow-lg;
+  }
+  .card-left{
+    @apply flex gap-3;
+  }
+  .card-right{
+    @apply flex flex-row gap-3;
+  }
+  .card-left-left{
+    @apply flex flex-col gap-2 items-center;
+  }
+  .card-left-right{
+    @apply flex flex-col gap-1 items-start ;
+  }
+  .card-right-up{
+    @apply flex flex-col items-center gap-4;
+  }
+  .card-right-down{
+    @apply flex flex-col items-center gap-4;
+  }
+}
