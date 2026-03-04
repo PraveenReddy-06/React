@@ -1,7 +1,7 @@
 import { memo } from 'react';
 import { useState } from 'react';
 import CounterDisplay from './CounterDisplay';
-
+import './Hero.css';
 const Hero = () => {
     console.log("hero is called");
     const[count,setCount] = useState(0);
@@ -38,8 +38,16 @@ This is called:
       setUser( prevUser => ({...prevUser, name:e.target.value}));/* ({}) this is same as return {} */
     }
 
+    const[city,setCity] = useState({name:'unknown city'});
+    const Immutability = () => {
+      /*const newCity = {...city}
+      newCity.name='Vijayawada'
+      setCity(newCity)*/
+      setCity( prev => ({...prev,name:"vijayawada"}));
+    }
+
   return (
-    <div>
+    <div className="hero-container">
       <h2>Hero</h2>
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleDecrement}>Decrement</button>
@@ -55,6 +63,10 @@ This is called:
 
       <input onChange={updateName}  type="text" placeholder="Enter Name to update user"/>
       <h3>Name : {user.name} Age: {user.age} Gender: {user.gender}</h3>
+
+      <br />
+      <h3>{city.name}</h3>
+      <button onClick={Immutability}>Click to set new CityName</button>
 
     </div>
   );
