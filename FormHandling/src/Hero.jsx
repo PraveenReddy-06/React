@@ -10,6 +10,7 @@ const Hero = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('form submitted');
+    console.log(name);
     setName('');
   }
 /* Onclick X OnSubmit */
